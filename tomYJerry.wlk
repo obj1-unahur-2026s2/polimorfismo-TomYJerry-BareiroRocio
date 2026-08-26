@@ -1,6 +1,8 @@
+// PARTE 1 26/08
 object tom {
     var energia = 50
-    
+
+    method energia() = energia
     method correr(metros){
         energia -= metros/2
     }
@@ -10,8 +12,12 @@ object tom {
     method estaFeliz() = energia > 50
 
     method velocidadMaxima() = 5 + energia/10
+    method cazar(velocidad) = velocidad /2 < energia and velocidad > 0
 
-}
+
+    }
+
+
 
 object jerry {
     var edad = 2
