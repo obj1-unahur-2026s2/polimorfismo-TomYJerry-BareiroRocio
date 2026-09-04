@@ -12,8 +12,9 @@ object tom {
     method estaFeliz() = energia > 50
 
     method velocidadMaxima() = 5 + energia/10
+    // parte 2
     method puedeCazar(distancia){
-        return  distancia > 0 and self.energia() >= distancia/2 
+        return  distancia > 0 and self.energia() > distancia/2 
     }
 
     method cazar(raton, distancia){
@@ -44,6 +45,12 @@ object nibbles {
 
 }
 
+// parte 3 
 object perez {
+    var peso = 20 // aumenta el doble cuando come queso
+    method peso() = peso
+    method comerQueso(){
+        peso = peso *2
+    }
 
 }
