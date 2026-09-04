@@ -12,7 +12,16 @@ object tom {
     method estaFeliz() = energia > 50
 
     method velocidadMaxima() = 5 + energia/10
-    method cazar(velocidad) = velocidad /2 < energia and velocidad > 0
+    method puedeCazar(distancia){
+        return  distancia > 0 and self.energia() >= distancia/2 
+    }
+
+    method cazar(raton, distancia){
+        if(self.puedeCazar(distancia)){
+            self.correr(distancia)
+            self.comer(raton)
+        }
+    }
 
 
     }
@@ -21,8 +30,12 @@ object tom {
 
 object jerry {
     var edad = 2
-
+    method edad() = edad
     method peso() = edad * 20
+    method cumplirAños(){ 
+        edad += 1
+    }
+
 }
 
 object nibbles {
